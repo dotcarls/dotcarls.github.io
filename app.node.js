@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(31);
+  var _reactDom = __webpack_require__(33);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -75,29 +75,29 @@ module.exports =
 
   var _libLocation2 = _interopRequireDefault(_libLocation);
 
-  var _componentsLayout = __webpack_require__(8);
+  var _componentsLayout = __webpack_require__(9);
 
   var _componentsLayout2 = _interopRequireDefault(_componentsLayout);
 
   var routes = {
     '/404': function _() {
-      return __webpack_require__(14);
-    }, '/500': function _() {
-      return __webpack_require__(15);
-    }, '/about': function about() {
       return __webpack_require__(16);
-    }, '/blog': function blog() {
+    }, '/500': function _() {
       return __webpack_require__(17);
-    }, '/blog/test-article-one': function blogTestArticleOne() {
+    }, '/about': function about() {
       return __webpack_require__(18);
-    }, '/blog/test-article-two': function blogTestArticleTwo() {
+    }, '/blog': function blog() {
       return __webpack_require__(19);
-    }, '/': function _() {
+    }, '/blog/test-article-one': function blogTestArticleOne() {
       return __webpack_require__(20);
-    }, '/rsvp': function rsvp() {
+    }, '/blog/test-article-two': function blogTestArticleTwo() {
       return __webpack_require__(21);
-    }, '/test': function test() {
+    }, '/': function _() {
       return __webpack_require__(22);
+    }, '/rsvp': function rsvp() {
+      return __webpack_require__(23);
+    }, '/test': function test() {
+      return __webpack_require__(24);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -249,11 +249,11 @@ module.exports =
 
   var _fbjsLibExecutionEnvironment = __webpack_require__(5);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(26);
+  var _historyLibCreateBrowserHistory = __webpack_require__(28);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibUseQueries = __webpack_require__(27);
+  var _historyLibUseQueries = __webpack_require__(29);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -270,6 +270,12 @@ module.exports =
 
 /***/ },
 /* 6 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-cookie");
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -341,7 +347,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -366,7 +372,7 @@ module.exports =
 
   var _reactMaterialize = __webpack_require__(2);
 
-  var _Cell = __webpack_require__(6);
+  var _Cell = __webpack_require__(7);
 
   var _Cell2 = _interopRequireDefault(_Cell);
 
@@ -484,7 +490,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -513,9 +519,9 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(23);
+  __webpack_require__(25);
 
-  var _Navigation = __webpack_require__(10);
+  var _Navigation = __webpack_require__(11);
 
   var _Navigation2 = _interopRequireDefault(_Navigation);
 
@@ -553,7 +559,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -588,7 +594,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(24);
+  __webpack_require__(26);
 
   var _libLocation = __webpack_require__(4);
 
@@ -670,7 +676,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -699,9 +705,9 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(25);
+  __webpack_require__(27);
 
-  var _Link = __webpack_require__(9);
+  var _Link = __webpack_require__(10);
 
   var _Link2 = _interopRequireDefault(_Link);
 
@@ -749,7 +755,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -772,7 +778,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _FormRow = __webpack_require__(7);
+  var _FormRow = __webpack_require__(8);
 
   var _FormRow2 = _interopRequireDefault(_FormRow);
 
@@ -820,7 +826,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -845,35 +851,43 @@ module.exports =
 
   var _reactMaterialize = __webpack_require__(2);
 
-  var _parse = __webpack_require__(28);
-
-  var _parse2 = _interopRequireDefault(_parse);
-
-  var _parseReact = __webpack_require__(29);
-
-  var _parseReact2 = _interopRequireDefault(_parseReact);
-
-  var _mandrillMinJs = __webpack_require__(13);
+  var _mandrillMinJs = __webpack_require__(15);
 
   var _mandrillMinJs2 = _interopRequireDefault(_mandrillMinJs);
 
-  var _PeopleWidget = __webpack_require__(11);
+  var _PeopleWidget = __webpack_require__(12);
 
   var _PeopleWidget2 = _interopRequireDefault(_PeopleWidget);
 
+  var _RsvpSummary = __webpack_require__(14);
+
+  var _RsvpSummary2 = _interopRequireDefault(_RsvpSummary);
+
+  var _reactCookie = __webpack_require__(6);
+
+  var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
   console.log(_mandrillMinJs2['default']);
   var m = new _mandrillMinJs2['default'].mandrill.Mandrill('vIMEddhNNLrr-WncvmudWQ');
-  console.log(m);
 
-  _parse2['default'].initialize("EjLV7fI36U8qGewLT4vqnegmZxxgbdoZoEHUPDTZ", "4AUn7THor6s8fxURva9YMqlFIi86ZCO5KQQN4NlU");
-  var Rsvp = _parse2['default'].Object.extend("Rsvp");
-  var rsvp = new Rsvp();
   var attendee = {
     firstName: "",
     lastName: "",
     underage: false,
     food: "schnitzel",
     allergies: ""
+  };
+
+  var initial = {
+    comment: "",
+    email: "",
+    attendees: [attendee],
+    hotel: {
+      needsReservation: false,
+      numberOfRooms: 1,
+      comment: ""
+    },
+    submitted: false
   };
 
   function copy(obj) {
@@ -886,10 +900,6 @@ module.exports =
     return newObj;
   }
 
-  function capitalize(theString) {
-    return theString.charAt(0).toUpperCase() + theString.slice(1);
-  }
-
   var RsvpEditor = (function (_Component) {
     _inherits(RsvpEditor, _Component);
 
@@ -899,6 +909,22 @@ module.exports =
       _classCallCheck(this, RsvpEditor);
 
       _get(Object.getPrototypeOf(RsvpEditor.prototype), 'constructor', this).call(this, props);
+
+      this.componentWillReceiveProps = function (newProps) {
+        if (newProps.theData !== _this.state.data) {
+          _this.setState({ data: newProps.theData });
+        }
+        if (newProps.rsvp !== _this.state.rsvp) {
+          _this.setState({ rsvp: newProps.rsvp });
+        }
+
+        if (newProps.submitted !== _this.state.submitted) {
+          _this.setState({ submitted: newProps.submitted });
+        }
+
+        console.log("component recieved props: ", newProps);
+        console.log("component current state: ", _this.state);
+      };
 
       this.handleCellChange = function (rowIdx, prop, val) {
         var newData = _this.state.data;
@@ -956,92 +982,43 @@ module.exports =
       };
 
       this.handleSubmitButtonClick = function () {
-        _this.setState({ "loading": true });
+        _this.setState({ loading: true });
+        console.log("should be loading from submit click, state: ", _this.state);
 
-        rsvp.save(_this.state.data, {
+        var saveData = _this.state.data;
+        if (saveData["lastModified"]) delete saveData["lastModified"];
+
+        console.log("in submit button click save");
+
+        _this.props.rsvp.save(saveData, {
           success: function success(theRsvp) {
-            console.log("record saved", theRsvp);
-            var temp = _this.state.data;
-            temp.code = theRsvp.id;
-            _this.setState({ data: temp });
-            console.log(_this.state);
+            console.log("record saved after submit button press", theRsvp);
             _this.setState({ "loading": false });
+            try {
+              _reactCookie2['default'].save('rsvp', theRsvp);
+            } catch (e) {
+              console.log(e);
+            }
           },
           error: function error(theRsvp, _error) {
             console.log("record failed", theRsvp, _error);
           }
         });
 
-        var newData = _this.state.data;
-        newData.submitted = true;
-        _this.setState({ data: newData });
-        console.log("triggered");
-        console.log(_this.state);
+        _this.state.submitted = true;
+        console.log("should be done with saving, state: ", _this.state);
+        _this.props.syncData(saveData);
       };
 
       this.handleEditButton = function () {
-        var newData = _this.state.data;
-        newData.submitted = false;
-        _this.setState({ data: newData });
-        console.log("triggered");
-        console.log(_this.state);
+        _this.setState({ submitted: false });
       };
 
-      this.sendEmail = function () {
-        var nameString = _this.state.data.attendees[0].firstName;
-
-        for (var i = 1; i < _this.state.data.attendees.length; i++) {
-          if (i == _this.state.data.attendees.length - 1) {
-            nameString += ", and " + _this.state.data.attendees[i].firstName;
-          } else {
-            nameString += ", " + _this.state.data.attendees[i].firstName;
-          }
-        }
-
-        m.call("messages/send-template", {
-          key: 'vIMEddhNNLrr-WncvmudWQ',
-          template_name: "wedding-template",
-          template_content: [{
-            "name": "firstNameString",
-            "content": nameString
-          }, {
-            "name": "hotelString",
-            "content": _this.state.data.hotel.needsReservation ? "<p>We will go ahead and reserve you <strong> " + _this.state.data.hotel.numberOfRooms + "</strong> rooms. </p>" : "<p>We will not reserve you a room.</p>"
-          }],
-          message: {
-            global_merge_vars: [{
-              "name": "firstNameString",
-              "content": nameString
-            }, {
-              "name": "hotelString",
-              "content": _this.state.data.hotel.needsReservation ? "<p>We will go ahead and reserve you <strong> " + _this.state.data.hotel.numberOfRooms + "</strong> rooms. </p>" : "<p>We will not reserve you a room.</p>"
-            }],
-            text: "RSVP For Tim and Maddy's Wedding!",
-            subject: "RSVP",
-            from_email: "rsvp@timandmaddy.com",
-            from_name: "Tim & Maddy",
-            to: [{
-              email: _this.state.data.email,
-              name: "Guest"
-            }]
-          },
-          async: true
-        }, function (httpResponse) {
-          console.log(httpResponse);
-        }, function (httpResponse) {
-          console.error(httpResponse);
-        });
-      };
-
-      this.state = { data: this.props.initialData, loading: false };
+      console.log("setting up dirty data from attributes: ", this.props.rsvp.attributes);
+      this.state = { data: this.props.theData, rsvp: this.props.rsvp, loading: false, submitted: this.props.submitted };
     }
 
     _createClass(RsvpEditor, [{
-      key: 'observe',
-      value: function observe(props, state) {
-        return {};
-      }
-    }, {
       key: 'render',
       value: function render() {
         var isRequestActive = this.state.data.hotel.comment !== "" ? "active" : "";
@@ -1073,52 +1050,18 @@ module.exports =
         var isCommentActive = this.state.data.comment !== "" ? "active" : "";
         var isEmailActive = this.state.data.email !== "" ? "active" : "";
 
-        var hotelReservationString = this.state.data.hotel.needsReservation ? _react2['default'].createElement(
-          'p',
-          null,
-          'We will go ahead and reserve you ',
-          _react2['default'].createElement(
-            'strong',
+        var modifiedString = "";
+        if (this.state.data.hasOwnProperty("lastModified")) {
+          var dateString = this.state.data.lastModified.toString();
+          modifiedString = _react2['default'].createElement(
+            'div',
             null,
-            ' ',
-            this.state.data.hotel.numberOfRooms,
-            ' '
-          ),
-          ' rooms. '
-        ) : _react2['default'].createElement(
-          'p',
-          null,
-          'We will not reserve you a room.'
-        );
-
-        var peopleRows = this.state.data.attendees.map(function (rowData, index) {
-          return _react2['default'].createElement(
-            'tr',
-            null,
-            _react2['default'].createElement(
-              'td',
-              null,
-              rowData.firstName + " " + rowData.lastName
-            ),
-            _react2['default'].createElement(
-              'td',
-              null,
-              capitalize(rowData.food)
-            ),
-            _react2['default'].createElement(
-              'td',
-              null,
-              rowData.allergies === "" ? "None" : rowData.allergies
-            ),
-            _react2['default'].createElement(
-              'td',
-              null,
-              rowData.underage ? "Yes" : "No"
-            )
+            'This RSVP was last modified on: ',
+            dateString
           );
-        }, this);
+        }
 
-        if (this.state.data.submitted) {
+        if (this.state.submitted) {
           if (this.state.loading) {
             return _react2['default'].createElement(
               _reactMaterialize.Row,
@@ -1130,101 +1073,13 @@ module.exports =
               )
             );
           } else {
-            return _react2['default'].createElement(
-              'div',
-              null,
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  'h2',
-                  null,
-                  'Thank you!'
-                ),
-                _react2['default'].createElement(
-                  'p',
-                  null,
-                  ' Use the code "',
-                  this.state.data.code,
-                  '" to edit your RSVP at a later date.'
-                )
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  'h5',
-                  null,
-                  'RSVP Summary'
-                ),
-                _react2['default'].createElement(
-                  'table',
-                  null,
-                  _react2['default'].createElement(
-                    'thead',
-                    null,
-                    _react2['default'].createElement(
-                      'tr',
-                      null,
-                      _react2['default'].createElement(
-                        'th',
-                        { 'data-field': 'name' },
-                        'Name'
-                      ),
-                      _react2['default'].createElement(
-                        'th',
-                        { 'data-field': 'food' },
-                        'Food Choice'
-                      ),
-                      _react2['default'].createElement(
-                        'th',
-                        { 'data-field': 'allergies' },
-                        'Allergies'
-                      ),
-                      _react2['default'].createElement(
-                        'th',
-                        { 'data-field': 'underage' },
-                        'Underage'
-                      )
-                    )
-                  ),
-                  _react2['default'].createElement(
-                    'tbody',
-                    null,
-                    peopleRows
-                  )
-                )
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  'h5',
-                  null,
-                  'Hotel Summary'
-                ),
-                hotelReservationString
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { onClick: this.sendEmail },
-                  'Send a copy of this to my email'
-                ),
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { onClick: this.handleEditButton },
-                  'Edit my RSVP'
-                )
-              )
-            );
+            return _react2['default'].createElement(_RsvpSummary2['default'], { data: this.state.data, handleEditButton: this.handleEditButton });
           }
         } else {
           return _react2['default'].createElement(
             'div',
             null,
+            modifiedString,
             _react2['default'].createElement(
               _reactMaterialize.Row,
               null,
@@ -1314,7 +1169,8 @@ module.exports =
                   'Submit'
                 )
               )
-            )
+            ),
+            this.state.toast
           );
         }
       }
@@ -1329,7 +1185,231 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 13 */
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactMaterialize = __webpack_require__(2);
+
+  function capitalize(theString) {
+    return theString.charAt(0).toUpperCase() + theString.slice(1);
+  }
+
+  var RsvpSummary = (function (_Component) {
+    _inherits(RsvpSummary, _Component);
+
+    function RsvpSummary(props) {
+      var _this = this;
+
+      _classCallCheck(this, RsvpSummary);
+
+      _get(Object.getPrototypeOf(RsvpSummary.prototype), 'constructor', this).call(this, props);
+
+      this.sendEmail = function () {
+        var nameString = _this.props.data.attendees[0].firstName;
+
+        for (var i = 1; i < _this.props.data.attendees.length; i++) {
+          if (i == _this.props.data.attendees.length - 1) {
+            nameString += ", and " + _this.props.data.attendees[i].firstName;
+          } else {
+            nameString += ", " + _this.props.data.attendees[i].firstName;
+          }
+        }
+
+        m.call("messages/send-template", {
+          key: 'vIMEddhNNLrr-WncvmudWQ',
+          template_name: "wedding-template",
+          template_content: [{ "name": "firstNameString",
+            "content": nameString }, { "name": "hotelString",
+            "content": _this.props.data.hotel.needsReservation ? "<p>We will go ahead and reserve you <strong> " + _this.props.data.hotel.numberOfRooms + "</strong> rooms. </p>" : "<p>We will not reserve you a room.</p>" }],
+          message: {
+            subject: "RSVP",
+            from_email: "rsvp@timandmaddy.com",
+            from_name: "Tim & Maddy",
+            to: [{
+              email: _this.props.data.email,
+              name: "Guest"
+            }]
+          },
+          async: true
+        }, function (httpResponse) {
+          console.log(httpResponse);
+        }, function (httpResponse) {
+          console.error(httpResponse);
+        });
+      };
+
+      console.log("reservation summary props: ", props);
+    }
+
+    _createClass(RsvpSummary, [{
+      key: 'render',
+      value: function render() {
+        var peopleRows = this.props.data.attendees.map(function (rowData, index) {
+          return _react2['default'].createElement(
+            'tr',
+            null,
+            _react2['default'].createElement(
+              'td',
+              null,
+              rowData.firstName + " " + rowData.lastName
+            ),
+            _react2['default'].createElement(
+              'td',
+              null,
+              capitalize(rowData.food)
+            ),
+            _react2['default'].createElement(
+              'td',
+              null,
+              rowData.allergies === "" ? "None" : rowData.allergies
+            ),
+            _react2['default'].createElement(
+              'td',
+              null,
+              rowData.underage ? "Yes" : "No"
+            )
+          );
+        }, this);
+
+        var hotelReservationString = this.props.data.hotel.needsReservation ? _react2['default'].createElement(
+          'p',
+          null,
+          'We will go ahead and reserve you ',
+          _react2['default'].createElement(
+            'strong',
+            null,
+            ' ',
+            this.props.data.hotel.numberOfRooms,
+            ' '
+          ),
+          ' rooms. '
+        ) : _react2['default'].createElement(
+          'p',
+          null,
+          'We will not reserve you a room.'
+        );
+
+        return _react2['default'].createElement(
+          'div',
+          null,
+          _react2['default'].createElement(
+            _reactMaterialize.Row,
+            null,
+            _react2['default'].createElement(
+              'h2',
+              null,
+              'Thank you!'
+            ),
+            _react2['default'].createElement(
+              'p',
+              null,
+              ' Use the code "',
+              this.props.data.id,
+              '" to edit your RSVP at a later date.'
+            )
+          ),
+          _react2['default'].createElement(
+            _reactMaterialize.Row,
+            null,
+            _react2['default'].createElement(
+              'h5',
+              null,
+              'RSVP Summary'
+            ),
+            _react2['default'].createElement(
+              'table',
+              null,
+              _react2['default'].createElement(
+                'thead',
+                null,
+                _react2['default'].createElement(
+                  'tr',
+                  null,
+                  _react2['default'].createElement(
+                    'th',
+                    { 'data-field': 'name' },
+                    'Name'
+                  ),
+                  _react2['default'].createElement(
+                    'th',
+                    { 'data-field': 'food' },
+                    'Food Choice'
+                  ),
+                  _react2['default'].createElement(
+                    'th',
+                    { 'data-field': 'allergies' },
+                    'Allergies'
+                  ),
+                  _react2['default'].createElement(
+                    'th',
+                    { 'data-field': 'underage' },
+                    'Underage'
+                  )
+                )
+              ),
+              _react2['default'].createElement(
+                'tbody',
+                null,
+                peopleRows
+              )
+            )
+          ),
+          _react2['default'].createElement(
+            _reactMaterialize.Row,
+            null,
+            _react2['default'].createElement(
+              'h5',
+              null,
+              'Hotel Summary'
+            ),
+            hotelReservationString
+          ),
+          _react2['default'].createElement(
+            _reactMaterialize.Row,
+            null,
+            _react2['default'].createElement(
+              _reactMaterialize.Button,
+              { onClick: this.sendEmail },
+              'Send a copy of this to my email'
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Button,
+              { onClick: this.props.handleEditButton },
+              'Edit my RSVP'
+            )
+          )
+        );
+      }
+    }]);
+
+    return RsvpSummary;
+  })(_react.Component);
+
+  exports['default'] = RsvpSummary;
+  module.exports = exports['default'];
+
+/***/ },
+/* 15 */
 /***/ function(module, exports) {
 
   // Generated by CoffeeScript 1.10.0
@@ -1637,7 +1717,7 @@ module.exports =
   })();
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1702,7 +1782,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1773,7 +1853,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1838,7 +1918,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1903,7 +1983,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1968,7 +2048,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -2033,7 +2113,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -2098,7 +2178,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -2129,9 +2209,32 @@ module.exports =
 
   var _reactMaterialize = __webpack_require__(2);
 
-  var _componentsRsvpEditor = __webpack_require__(12);
+  var _componentsRsvpEditor = __webpack_require__(13);
 
   var _componentsRsvpEditor2 = _interopRequireDefault(_componentsRsvpEditor);
+
+  var _reactCookie = __webpack_require__(6);
+
+  var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
+  var _parse = __webpack_require__(30);
+
+  var _parse2 = _interopRequireDefault(_parse);
+
+  var _parseReact = __webpack_require__(31);
+
+  var _parseReact2 = _interopRequireDefault(_parseReact);
+
+  _parse2['default'].initialize("EjLV7fI36U8qGewLT4vqnegmZxxgbdoZoEHUPDTZ", "4AUn7THor6s8fxURva9YMqlFIi86ZCO5KQQN4NlU");
+  var Rsvp = _parse2['default'].Object.extend("Rsvp");
+  var rsvp = new Rsvp();
+
+  var isBrowser = typeof window !== 'undefined';
+  var locationString = isBrowser ? window.location.search : "";
+
+  var cookieRsvp = _reactCookie2['default'].load('rsvp');
+
+  var submitted = false;
 
   var attendee = {
     firstName: "",
@@ -2149,23 +2252,114 @@ module.exports =
       needsReservation: false,
       numberOfRooms: 1,
       comment: ""
-    },
-    submitted: false
+    }
   };
+
+  var mockRsvp = { id: "", attributes: initial };
+
+  function transferParseData(obj) {
+    var properties = Object.keys(initial);
+    var newObj = {};
+    console.log("transfering parse data");
+    properties.forEach(function (property) {
+      console.log("on property: ", property);
+      console.log("      value: ", obj.attributes[property]);
+      console.log("     typeof: ", typeof obj.attributes[property]);
+      newObj[property] = obj.attributes[property];
+    });
+    console.log("new obj", newObj);
+    return newObj;
+  }
 
   var _default = (function (_Component) {
     _inherits(_default, _Component);
 
     function _default(props) {
+      var _this = this;
+
       _classCallCheck(this, _default);
 
       _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).call(this, props);
-      this.state = initial;
+
+      this.componentDidMount = function () {
+        if (isBrowser) {
+          if (locationString !== "") {
+            rsvp.id = locationString.substring(1);
+            rsvp.fetch({
+              success: function success(theRsvp) {
+                console.log("rsvp loaded from url parameter", theRsvp);
+                try {
+                  _reactCookie2['default'].save('rsvp', theRsvp);
+                } catch (e) {
+                  console.log(e);
+                }
+
+                var obj = transferParseData(theRsvp);
+                obj.id = theRsvp.id;
+
+                _this.setState({ rsvp: theRsvp });
+                _this.setState({ submitted: true });
+                _this.setState({ theData: obj });
+              },
+              error: function error(theRsvp, _error) {
+                console.log("there was an error", theRsvp);
+              }
+            });
+          } else if (typeof cookieRsvp !== 'undefined') {
+            console.log("loading from cookie: ", cookieRsvp);
+
+            _this.setState({ submitted: true });
+
+            var obj = cookieRsvp;
+            obj.id = cookieRsvp.objectId;
+            _this.setState({ theData: obj });
+
+            rsvp.id = cookieRsvp.objectId;
+            rsvp.fetch({
+              success: function success(theRsvp) {
+                console.log("rsvp loaded from cookie", theRsvp);
+                try {
+                  _reactCookie2['default'].save('rsvp', theRsvp);
+                } catch (e) {
+                  console.log(e);
+                }
+
+                var obj = transferParseData(theRsvp);
+                obj.id = theRsvp.id;
+
+                _this.setState({ rsvp: theRsvp });
+                _this.setState({ submitted: true });
+                _this.setState({ theData: obj });
+
+                console.log("finished loading cookie, current state: ", _this.state);
+              },
+              error: function error(theRsvp, _error2) {
+                console.log("there was an error", theRsvp, _error2);
+              }
+            });
+          } else {
+            _this.setState({ rsvp: rsvp });
+            _this.setState({ theData: initial });
+            _this.setState({ submitted: false });
+          }
+        }
+      };
+
+      this.syncData = function (newData) {
+        _this.setState({ theData: newData });
+      };
+
+      this.state = {};
+      this.state.rsvp = rsvp;
+      this.state.theData = initial;
+      console.log("constructor this.state", this.state);
     }
 
     _createClass(_default, [{
       key: 'render',
       value: function render() {
+        var page;
+
         return _react2['default'].createElement(
           _reactMaterialize.Row,
           null,
@@ -2177,7 +2371,7 @@ module.exports =
               null,
               'RSVP'
             ),
-            _react2['default'].createElement(_componentsRsvpEditor2['default'], { initialData: this.state })
+            _react2['default'].createElement(_componentsRsvpEditor2['default'], { rsvp: this.state.rsvp, theData: this.state.theData, submitted: this.state.submitted })
           )
         );
       }
@@ -2190,7 +2384,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -2219,7 +2413,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactBootstrap = __webpack_require__(30);
+  var _reactBootstrap = __webpack_require__(32);
 
   var _default = (function (_Component) {
     _inherits(_default, _Component);
@@ -2262,7 +2456,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(3)();
@@ -2276,7 +2470,7 @@ module.exports =
 
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(3)();
@@ -2290,7 +2484,7 @@ module.exports =
 
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(3)();
@@ -2304,37 +2498,37 @@ module.exports =
 
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/useQueries");
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports) {
 
   module.exports = require("parse");
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports) {
 
   module.exports = require("parse-react");
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports) {
 
   module.exports = require("react-bootstrap");
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
