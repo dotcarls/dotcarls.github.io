@@ -622,7 +622,7 @@ module.exports =
           { className: 'card-action valign-wrapper' },
           _react2['default'].createElement(
             'div',
-            { className: 'col s3 offset-s9 valign' },
+            { className: 'col s4 offset-s8 valign right-align' },
             'Remove ',
             _react2['default'].createElement(
               _reactMaterialize.Button,
@@ -637,7 +637,7 @@ module.exports =
         ) : "";
         return _react2['default'].createElement(
           _reactMaterialize.Row,
-          null,
+          { className: 'reduced-row-padding row' },
           _react2['default'].createElement(
             'div',
             { className: 'col s12' },
@@ -1105,23 +1105,29 @@ module.exports =
         console.log("in submit button click save");
 
         _this.props.rsvp.save(saveData, {
-          success: function success(theRsvp) {
-            console.log("record saved after submit button press", theRsvp);
-            _this.setState({ "loading": false });
-            try {
-              _reactCookie2['default'].save('rsvp', theRsvp);
-            } catch (e) {
-              console.log(e);
-            }
-          },
-          error: function error(theRsvp, _error) {
-            console.log("record failed", theRsvp, _error);
-          }
+          success: _this.submitSuccess,
+          error: _this.submitFailure
         });
+      };
 
-        _this.state.submitted = true;
+      this.submitSuccess = function (theRsvp) {
+        console.log("record saved after submit button press", theRsvp);
+        _this.setState({ "loading": false });
+        try {
+          _reactCookie2['default'].save('rsvp', theRsvp);
+        } catch (e) {
+          console.log(e);
+        }
+        _this.setState.submitted = true;
         console.log("should be done with saving, state: ", _this.state);
-        _this.props.syncData(saveData);
+        var obj = {};
+        obj = copy(theRsvp.attributes);
+        obj.id = theRsvp.id;
+        _this.props.syncData(obj);
+      };
+
+      this.submitFailure = function (theRsvp, error) {
+        console.log("record failed", theRsvp, error);
       };
 
       this.handleEditButton = function () {
@@ -1197,7 +1203,7 @@ module.exports =
               _react2['default'].createElement(_PeopleWidget2['default'], { data: this.state.data.attendees, onCellChange: this.handleCellChange, removeRow: this.removeRow }),
               _react2['default'].createElement(
                 'div',
-                { className: 'col s1 offset-s11' },
+                { className: 'col s2 offset-s10 right-align' },
                 _react2['default'].createElement(
                   _reactMaterialize.Button,
                   { floating: true, onClick: this.handleButtonClick, waves: 'light' },
@@ -1262,7 +1268,7 @@ module.exports =
               null,
               _react2['default'].createElement(
                 'div',
-                { className: 'col offset-s9 s3' },
+                { className: 'col offset-s8 s4 right-align' },
                 _react2['default'].createElement(
                   _reactMaterialize.Button,
                   { onClick: this.handleSubmitButtonClick },
@@ -1346,14 +1352,6 @@ module.exports =
         m.call("messages/send-template", {
           key: 'vIMEddhNNLrr-WncvmudWQ',
           template_name: "wedding-template",
-          template_content: [{ "name": "firstNameString",
-            "content": nameString }, { "name": "hotelString",
-            "content": _this.props.data.hotel.needsReservation ? "<p>We will go ahead and reserve you <strong> " + _this.props.data.hotel.numberOfRooms + "</strong> rooms. </p>" : "<p>We will not reserve you a room.</p>" }, { "name": "rsvpURL",
-            "content": "timandmaddy.com/rsvp?" + _this.props.data.id }],
-          global_merge_vars: [{ "name": "firstNameString",
-            "content": nameString }, { "name": "hotelString",
-            "content": _this.props.data.hotel.needsReservation ? "<p>We will go ahead and reserve you <strong> " + _this.props.data.hotel.numberOfRooms + "</strong> rooms. </p>" : "<p>We will not reserve you a room.</p>" }, { "name": "rsvpURL",
-            "content": "timandmaddy.com/rsvp?" + _this.props.data.id }],
           message: {
             subject: "RSVP",
             from_email: "rsvp@timandmaddy.com",
@@ -1380,6 +1378,10 @@ module.exports =
       this.state = {};
       this.state.emailed = false;
       this.state.emailButtonText = "Send RSVP to Email";
+
+      if (this.props.data.email == '') {
+        this.state.emailed = true;
+      }
     }
 
     _createClass(RsvpSummary, [{
@@ -1429,6 +1431,7 @@ module.exports =
           null,
           'We will not reserve you a room.'
         );
+        var emailString = this.props.data.email !== '' ? this.props.data.email : "none";
 
         return _react2['default'].createElement(
           'div',
@@ -1520,21 +1523,17 @@ module.exports =
             ),
             _react2['default'].createElement(
               'div',
-              { className: 'valign-wrapper' },
+              { className: 'col s12' },
+              'E-mail: ',
+              emailString
+            ),
+            _react2['default'].createElement(
+              'div',
+              { className: 'col s12' },
               _react2['default'].createElement(
-                'div',
-                { className: 'col s6 valign' },
-                'E-mail: ',
-                this.props.data.email
-              ),
-              _react2['default'].createElement(
-                'div',
-                { className: 'col s6 valign' },
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { onClick: this.sendEmail, disabled: this.state.emailed },
-                  this.state.emailButtonText
-                )
+                _reactMaterialize.Button,
+                { onClick: this.sendEmail, disabled: this.state.emailed },
+                this.state.emailButtonText
               )
             )
           )
@@ -2595,7 +2594,7 @@ module.exports =
               'div',
               { className: 'col s12' },
               _react2['default'].createElement('img', { className: 'responsive-img no-mouse', src: 'art/rsvp-banner.png' }),
-              _react2['default'].createElement(_componentsRsvpEditor2['default'], { rsvp: this.state.rsvp, theData: this.state.theData, submitted: this.state.submitted })
+              _react2['default'].createElement(_componentsRsvpEditor2['default'], { rsvp: this.state.rsvp, theData: this.state.theData, submitted: this.state.submitted, syncData: this.syncData })
             )
           )
         );
@@ -2714,7 +2713,7 @@ module.exports =
 
 
   // module
-  exports.push([module.id, "/**\r\n * React Static Boilerplate\r\n * https://github.com/koistya/react-static-boilerplate\r\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\r\n */\r\n\r\n@font-face {\r\n  font-family: 'IceCreamSundaes';\r\n  src: url(" + __webpack_require__(30) + ");\r\n}\r\n\r\n/**\r\n * React Static Boilerplate\r\n * https://github.com/koistya/react-static-boilerplate\r\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\r\n */\r\n\r\n/*\r\n * Scaffolding\r\n * -------------------------------------------------------------------------- */\r\n\r\n/*\r\n * Typography\r\n * -------------------------------------------------------------------------- */\r\n\r\n/*\r\n * Media queries breakpoints\r\n * -------------------------------------------------------------------------- */\r\n\r\nhtml, body {\r\n  margin: 0;\r\n  padding: 0;\r\n  background-color: #c8e6c9;\r\n  color: #333;\r\n  font-family: 'IceCreamSundaes','Coming Soon','Helvetica',sans-serif;\r\n}\r\n\r\n.select-wrapper input.select-dropdown {\r\n  line-height:3.2rem;\r\n}\r\n\r\ninput[type=text] {\r\n  line-height:3.2rem;\r\n}\r\n\r\n.Layout {\r\n  margin: 0 auto;\r\n}\r\n\r\n.inner {\r\n  margin: 100px auto !important;\r\n  float: none !important;\r\n}\r\n\r\n.input-field label {\r\n  color: #515151;\r\n}\r\n\r\n.left-leaf {\r\n  position:absolute;\r\n  margin: -7% -16%;\r\n  width: 20%;\r\n  pointer-events: none;\r\n}\r\n\r\n.right-leaf {\r\n  position:absolute;\r\n  margin: -7% -4%;\r\n  width: 20%;\r\n  pointer-events: none;\r\n}\r\n\r\n.no-mouse {\r\n  pointer-events: none;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .Layout {\r\n    width: calc(768px - 18px);\r\n  }\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .Layout {\r\n    width: calc(992px - 22px);\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .Layout {\r\n    width: calc(1200px - 30px);\r\n  }\r\n}\r\n", ""]);
+  exports.push([module.id, "/**\r\n * React Static Boilerplate\r\n * https://github.com/koistya/react-static-boilerplate\r\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\r\n */\r\n\r\n@font-face {\r\n  font-family: 'IceCreamSundaes';\r\n  src: url(" + __webpack_require__(30) + ");\r\n}\r\n\r\n/**\r\n * React Static Boilerplate\r\n * https://github.com/koistya/react-static-boilerplate\r\n * Copyright (c) Konstantin Tarkus (@koistya) | MIT license\r\n */\r\n\r\n/*\r\n * Scaffolding\r\n * -------------------------------------------------------------------------- */\r\n\r\n/*\r\n * Typography\r\n * -------------------------------------------------------------------------- */\r\n\r\n/*\r\n * Media queries breakpoints\r\n * -------------------------------------------------------------------------- */\r\n\r\nhtml, body {\r\n  margin: 0;\r\n  padding: 0;\r\n  background-color: #c8e6c9;\r\n  color: #333;\r\n  font-family: 'IceCreamSundaes','Coming Soon','Helvetica',sans-serif;\r\n}\r\n\r\ndiv.reduced-row-padding.row {\r\n  margin-bottom: 0px !important;\r\n}\r\n\r\n.select-wrapper input.select-dropdown {\r\n  line-height:3.2rem;\r\n}\r\n\r\n.card .card-action {\r\n  padding-right: 0px !important;\r\n}\r\n\r\n\r\ninput[type=text] {\r\n  line-height:3.2rem;\r\n}\r\n\r\n.Layout {\r\n  margin: 0 auto;\r\n}\r\n\r\n.inner {\r\n  margin: 100px auto !important;\r\n  float: none !important;\r\n}\r\n\r\n.input-field label {\r\n  color: #515151;\r\n}\r\n\r\n.left-leaf {\r\n  position:absolute;\r\n  margin: -7% -16%;\r\n  width: 20%;\r\n  pointer-events: none;\r\n}\r\n\r\n.right-leaf {\r\n  position:absolute;\r\n  margin: -7% -4%;\r\n  width: 20%;\r\n  pointer-events: none;\r\n}\r\n\r\n.no-mouse {\r\n  pointer-events: none;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .Layout {\r\n    width: calc(768px - 18px);\r\n  }\r\n}\r\n\r\n@media (min-width: 992px) {\r\n  .Layout {\r\n    width: calc(992px - 22px);\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .Layout {\r\n    width: calc(1200px - 30px);\r\n  }\r\n}\r\n", ""]);
 
   // exports
 
