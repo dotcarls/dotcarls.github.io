@@ -1352,6 +1352,10 @@ module.exports =
         m.call("messages/send-template", {
           key: 'vIMEddhNNLrr-WncvmudWQ',
           template_name: "wedding-template",
+          template_content: [{ "name": "firstNameString",
+            "content": nameString }, { "name": "hotelString",
+            "content": _this.props.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.props.data.hotel.numberOfRooms + " rooms. " : "We will not reserve you a room." }, { "name": "rsvpURL",
+            "content": "timandmaddy.com/rsvp?" + _this.props.data.id }],
           message: {
             subject: "RSVP",
             from_email: "rsvp@timandmaddy.com",
@@ -1390,7 +1394,7 @@ module.exports =
         var peopleRows = this.props.data.attendees.map(function (rowData, index) {
           return _react2['default'].createElement(
             'tr',
-            null,
+            { key: "people" + index },
             _react2['default'].createElement(
               'td',
               null,
