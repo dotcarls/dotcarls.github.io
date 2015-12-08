@@ -1118,12 +1118,12 @@ module.exports =
         } catch (e) {
           console.log(e);
         }
-        _this.setState.submitted = true;
         console.log("should be done with saving, state: ", _this.state);
         var obj = {};
         obj = copy(theRsvp.attributes);
         obj.id = theRsvp.id;
         _this.props.syncData(obj);
+        _this.props.syncSubmitted(true);
       };
 
       this.submitFailure = function (theRsvp, error) {
@@ -2573,6 +2573,10 @@ module.exports =
         _this.setState({ theData: newData });
       };
 
+      this.syncSubmitted = function (submitted) {
+        _this.setState({ submitted: submitted });
+      };
+
       this.state = {};
       this.state.rsvp = rsvp;
       this.state.theData = initial;
@@ -2594,7 +2598,7 @@ module.exports =
               'div',
               { className: 'col s12' },
               _react2['default'].createElement('img', { className: 'responsive-img no-mouse', src: 'art/rsvp-banner.png' }),
-              _react2['default'].createElement(_componentsRsvpEditor2['default'], { rsvp: this.state.rsvp, theData: this.state.theData, submitted: this.state.submitted, syncData: this.syncData })
+              _react2['default'].createElement(_componentsRsvpEditor2['default'], { rsvp: this.state.rsvp, theData: this.state.theData, submitted: this.state.submitted, syncData: this.syncData, syncSubmitted: this.syncSubmitted })
             )
           )
         );
