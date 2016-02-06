@@ -524,7 +524,7 @@ module.exports =
                 'artwork and font made by ',
                 _react2['default'].createElement(
                   'a',
-                  { href: 'http://toysbyjeanelise.com', className: 'grey-text text-lighten-4' },
+                  { href: 'http://toysbyjeanelise.com', target: '_blank', className: 'grey-text text-lighten-4' },
                   'Jean Elise'
                 )
               )
