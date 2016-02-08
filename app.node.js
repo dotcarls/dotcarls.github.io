@@ -69,13 +69,13 @@ module.exports =
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
-  var _fbjsLibExecutionEnvironment = __webpack_require__(6);
+  var _fbjsLibExecutionEnvironment = __webpack_require__(7);
 
-  var _libLocation = __webpack_require__(5);
+  var _libLocation = __webpack_require__(6);
 
   var _libLocation2 = _interopRequireDefault(_libLocation);
 
-  var _componentsLayout = __webpack_require__(11);
+  var _componentsLayout = __webpack_require__(12);
 
   var _componentsLayout2 = _interopRequireDefault(_componentsLayout);
 
@@ -259,7 +259,7 @@ module.exports =
 
   __webpack_require__(24);
 
-  var _libLocation = __webpack_require__(5);
+  var _libLocation = __webpack_require__(6);
 
   var _libLocation2 = _interopRequireDefault(_libLocation);
 
@@ -340,1299 +340,6 @@ module.exports =
 
 /***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  var _fbjsLibExecutionEnvironment = __webpack_require__(6);
-
-  var _historyLibCreateBrowserHistory = __webpack_require__(27);
-
-  var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
-
-  var _historyLibUseQueries = __webpack_require__(28);
-
-  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
-
-  var location = _fbjsLibExecutionEnvironment.canUseDOM ? (0, _historyLibUseQueries2['default'])(_historyLibCreateBrowserHistory2['default'])() : {};
-
-  exports['default'] = location;
-  module.exports = exports['default'];
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-  module.exports = require("fbjs/lib/ExecutionEnvironment");
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-cookie");
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _reactMaterialize = __webpack_require__(2);
-
-  var Cell = (function (_Component) {
-    _inherits(Cell, _Component);
-
-    function Cell(props) {
-      var _this = this;
-
-      _classCallCheck(this, Cell);
-
-      _get(Object.getPrototypeOf(Cell.prototype), 'constructor', this).call(this, props);
-
-      this.handleChange = function (e) {
-        _this.props.onChange(e.target.value);
-      };
-    }
-
-    _createClass(Cell, [{
-      key: 'render',
-      value: function render() {
-        var active = this.props.data === "" ? "" : "active";
-        return _react2['default'].createElement(
-          'div',
-          { className: 'col s4 input-field' },
-          _react2['default'].createElement('input', { value: this.props.data, onChange: this.handleChange, type: 'text' }),
-          _react2['default'].createElement(
-            'label',
-            { className: active },
-            this.props.label
-          )
-        );
-      }
-    }], [{
-      key: 'propTypes',
-      value: {
-        data: _react2['default'].PropTypes.string.isRequired,
-        label: _react2['default'].PropTypes.string.isRequired,
-        onChange: _react2['default'].PropTypes.func.isRequired
-      },
-      enumerable: true
-    }]);
-
-    return Cell;
-  })(_react.Component);
-
-  exports['default'] = Cell;
-  module.exports = exports['default'];
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  __webpack_require__(22);
-
-  var _Link = __webpack_require__(4);
-
-  var _Link2 = _interopRequireDefault(_Link);
-
-  var _default = (function (_Component) {
-    _inherits(_default, _Component);
-
-    function _default() {
-      _classCallCheck(this, _default);
-
-      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(_default, [{
-      key: 'render',
-      value: function render() {
-        return _react2['default'].createElement(
-          'footer',
-          { className: 'page-footer' },
-          _react2['default'].createElement('div', { className: 'container' }),
-          _react2['default'].createElement(
-            'div',
-            { className: 'footer-copyright' },
-            _react2['default'].createElement(
-              'div',
-              { className: 'container center-align' },
-              _react2['default'].createElement(
-                'span',
-                { className: 'left' },
-                '© Tim Carlson 2016'
-              ),
-              _react2['default'].createElement(
-                'span',
-                { className: 'right' },
-                'artwork and font made by ',
-                _react2['default'].createElement(
-                  'a',
-                  { href: 'http://toysbyjeanelise.com', target: '_blank', className: 'grey-text text-lighten-4' },
-                  'Jean Elise'
-                )
-              )
-            )
-          )
-        );
-      }
-    }]);
-
-    return _default;
-  })(_react.Component);
-
-  exports['default'] = _default;
-  module.exports = exports['default'];
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _reactMaterialize = __webpack_require__(2);
-
-  var _Cell = __webpack_require__(8);
-
-  var _Cell2 = _interopRequireDefault(_Cell);
-
-  var FormRow = (function (_Component) {
-    _inherits(FormRow, _Component);
-
-    function FormRow(props) {
-      var _this = this;
-
-      _classCallCheck(this, FormRow);
-
-      _get(Object.getPrototypeOf(FormRow.prototype), 'constructor', this).call(this, props);
-
-      this.handleChange = function (prop, value) {
-        _this.props.onCellChange(prop, value);
-      };
-
-      this.handleSelectChange = function () {
-        var value = _this.refs.sel.value;
-        _this.props.onCellChange("food", value);
-      };
-
-      this.handleAgeChange = function (prop, value) {
-        _this.props.onCellChange("underage", !_this.props.data.underage);
-      };
-
-      this.componentDidMount = function () {
-        $(_this.refs.sel).material_select(_this.handleSelectChange);
-      };
-
-      var under21 = false;
-      //console.log("props", props);
-    }
-
-    _createClass(FormRow, [{
-      key: 'render',
-      value: function render() {
-        var needsButton = this.props.needsButton ? _react2['default'].createElement(
-          'div',
-          { className: 'card-action valign-wrapper' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'col s4 offset-s8 valign right-align' },
-            'Remove ',
-            _react2['default'].createElement(
-              _reactMaterialize.Button,
-              { floating: true, onClick: this.props.removeRow, waves: 'light' },
-              _react2['default'].createElement(
-                _reactMaterialize.Icon,
-                null,
-                'remove'
-              )
-            )
-          )
-        ) : "";
-        return _react2['default'].createElement(
-          _reactMaterialize.Row,
-          { className: 'reduced-row-padding row' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'col s12' },
-            _react2['default'].createElement(
-              'div',
-              { className: 'card green lighten-5' },
-              _react2['default'].createElement(
-                'div',
-                { className: 'card-content' },
-                _react2['default'].createElement(
-                  'span',
-                  { className: 'card-title black-text' },
-                  this.props.data.firstName + " " + this.props.data.lastName
-                ),
-                _react2['default'].createElement(
-                  _reactMaterialize.Row,
-                  null,
-                  _react2['default'].createElement(
-                    'div',
-                    { className: 'valign-wrapper' },
-                    _react2['default'].createElement(_Cell2['default'], { className: 'valign', data: this.props.data.firstName, label: 'First Name', onChange: this.handleChange.bind(null, "firstName") }),
-                    _react2['default'].createElement(_Cell2['default'], { className: 'valign', data: this.props.data.lastName, label: 'Last Name', onChange: this.handleChange.bind(null, "lastName") }),
-                    _react2['default'].createElement(_reactMaterialize.Input, { className: 'valign', type: 'checkbox', s: 4, label: 'Under 21?', ref: 'age', onChange: this.handleAgeChange, checked: this.props.data.underage })
-                  )
-                ),
-                _react2['default'].createElement(
-                  _reactMaterialize.Row,
-                  { className: 'hide' },
-                  _react2['default'].createElement(
-                    'div',
-                    { className: 'input-field col s4 hide' },
-                    _react2['default'].createElement(
-                      'select',
-                      { ref: 'sel', value: this.props.data.food, onChange: this.handleSelectChange, className: 'hidden' },
-                      _react2['default'].createElement(
-                        'option',
-                        { value: 'schnitzel', 'data-icon': 'schnitzel.jpg', className: 'circle' },
-                        "Schnitzel"
-                      ),
-                      _react2['default'].createElement(
-                        'option',
-                        { value: 'chicken' },
-                        "Chicken"
-                      ),
-                      _react2['default'].createElement(
-                        'option',
-                        { value: 'vegetarian' },
-                        "Vegetarian"
-                      )
-                    ),
-                    _react2['default'].createElement(
-                      'label',
-                      { className: 'hide' },
-                      "Food"
-                    )
-                  ),
-                  _react2['default'].createElement(_Cell2['default'], { className: 'hide', data: this.props.data.allergies, label: 'Allergies?', onChange: this.handleChange.bind(null, "allergies") })
-                )
-              ),
-              needsButton
-            )
-          ),
-          _react2['default'].createElement('div', { className: 'divider' })
-        );
-      }
-    }], [{
-      key: 'propTypes',
-      value: {
-        data: _react2['default'].PropTypes.object.isRequired,
-        onCellChange: _react2['default'].PropTypes.func.isRequired
-      },
-      enumerable: true
-    }]);
-
-    return FormRow;
-  })(_react.Component);
-
-  exports['default'] = FormRow;
-  module.exports = exports['default'];
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  __webpack_require__(23);
-
-  var _Navigation = __webpack_require__(12);
-
-  var _Navigation2 = _interopRequireDefault(_Navigation);
-
-  var _Footer = __webpack_require__(9);
-
-  var _Footer2 = _interopRequireDefault(_Footer);
-
-  var Layout = (function (_Component) {
-    _inherits(Layout, _Component);
-
-    function Layout() {
-      _classCallCheck(this, Layout);
-
-      _get(Object.getPrototypeOf(Layout.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(Layout, [{
-      key: 'render',
-      value: function render() {
-        return _react2['default'].createElement(
-          'div',
-          null,
-          _react2['default'].createElement(
-            'div',
-            { className: 'Layout' },
-            _react2['default'].createElement(_Navigation2['default'], null),
-            this.props.children
-          ),
-          _react2['default'].createElement(_Footer2['default'], null)
-        );
-      }
-    }], [{
-      key: 'propTypes',
-      value: {
-        children: _react.PropTypes.element.isRequired
-      },
-      enumerable: true
-    }]);
-
-    return Layout;
-  })(_react.Component);
-
-  exports['default'] = Layout;
-  module.exports = exports['default'];
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-  /**
-   * React Static Boilerplate
-   * https://github.com/koistya/react-static-boilerplate
-   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
-   */
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  __webpack_require__(25);
-
-  var _Link = __webpack_require__(4);
-
-  var _Link2 = _interopRequireDefault(_Link);
-
-  var _default = (function (_Component) {
-    _inherits(_default, _Component);
-
-    function _default() {
-      _classCallCheck(this, _default);
-
-      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
-    }
-
-    _createClass(_default, [{
-      key: 'render',
-      value: function render() {
-        return _react2['default'].createElement(
-          'ul',
-          { className: 'Navigation', role: 'menu' },
-          _react2['default'].createElement(
-            'li',
-            { className: 'Navigation-item' },
-            _react2['default'].createElement(
-              'a',
-              { className: 'Navigation-link', href: '/', onClick: _Link2['default'].handleClick },
-              'Home'
-            )
-          ),
-          _react2['default'].createElement(
-            'li',
-            { className: 'Navigation-item' },
-            _react2['default'].createElement(
-              'a',
-              { className: 'Navigation-link', href: '/rsvp', onClick: _Link2['default'].handleClick },
-              'RSVP'
-            )
-          ),
-          _react2['default'].createElement(
-            'li',
-            { className: 'Navigation-item' },
-            _react2['default'].createElement(
-              'a',
-              { className: 'Navigation-link', href: '/registry', onClick: _Link2['default'].handleClick },
-              'Registry'
-            )
-          )
-        );
-      }
-    }]);
-
-    return _default;
-  })(_react.Component);
-
-  exports['default'] = _default;
-  module.exports = exports['default'];
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _FormRow = __webpack_require__(10);
-
-  var _FormRow2 = _interopRequireDefault(_FormRow);
-
-  var PeopleWidget = (function (_Component) {
-    _inherits(PeopleWidget, _Component);
-
-    function PeopleWidget(props) {
-      _classCallCheck(this, PeopleWidget);
-
-      _get(Object.getPrototypeOf(PeopleWidget.prototype), 'constructor', this).call(this, props);
-    }
-
-    _createClass(PeopleWidget, [{
-      key: 'render',
-      value: function render() {
-        var rows = this.props.data.map(function (rowData, index) {
-          var needButton = index === 0 ? false : true;
-          return _react2['default'].createElement(_FormRow2['default'], { needsButton: needButton,
-            key: index,
-            data: rowData,
-            onCellChange: this.props.onCellChange.bind(null, index),
-            removeRow: this.props.removeRow.bind(null, index),
-            isUnder21: rowData.underage });
-        }, this);
-
-        return _react2['default'].createElement(
-          'div',
-          null,
-          rows
-        );
-      }
-    }], [{
-      key: 'propTypes',
-      value: {
-        data: _react2['default'].PropTypes.array.isRequired,
-        onCellChange: _react2['default'].PropTypes.func.isRequired
-      },
-      enumerable: true
-    }]);
-
-    return PeopleWidget;
-  })(_react.Component);
-
-  exports['default'] = PeopleWidget;
-  module.exports = exports['default'];
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _reactMaterialize = __webpack_require__(2);
-
-  var _PeopleWidget = __webpack_require__(13);
-
-  var _PeopleWidget2 = _interopRequireDefault(_PeopleWidget);
-
-  var _RsvpSummary = __webpack_require__(15);
-
-  var _RsvpSummary2 = _interopRequireDefault(_RsvpSummary);
-
-  var _reactCookie = __webpack_require__(7);
-
-  var _reactCookie2 = _interopRequireDefault(_reactCookie);
-
-  var attendee = {
-    firstName: "",
-    lastName: "",
-    underage: false,
-    food: "schnitzel",
-    allergies: ""
-  };
-
-  var initial = {
-    comment: "",
-    email: "",
-    attendees: [attendee],
-    hotel: {
-      needsReservation: false,
-      numberOfRooms: 1,
-      comment: ""
-    },
-    submitted: false,
-    attending: false,
-    notAttendingName: ""
-  };
-
-  function copy(obj) {
-    var newObj = {};
-    for (var key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        newObj[key] = obj[key];
-      }
-    }
-    return newObj;
-  }
-
-  var RsvpEditor = (function (_Component) {
-    _inherits(RsvpEditor, _Component);
-
-    function RsvpEditor(props) {
-      var _this = this;
-
-      _classCallCheck(this, RsvpEditor);
-
-      _get(Object.getPrototypeOf(RsvpEditor.prototype), 'constructor', this).call(this, props);
-      ////console.log("setting up dirty data from attributes: ", this.props.rsvp.attributes);
-
-      this.componentWillReceiveProps = function (newProps) {
-        if (newProps.theData !== _this.state.data) {
-          _this.setState({ data: newProps.theData });
-        }
-        if (newProps.rsvp !== _this.state.rsvp) {
-          _this.setState({ rsvp: newProps.rsvp });
-        }
-
-        if (newProps.submitted !== _this.state.submitted) {
-          _this.setState({ submitted: newProps.submitted });
-        }
-
-        ////console.log("component recieved props: ", newProps);
-        //console.log("component current state: ", this.state);
-      };
-
-      this.handleCellChange = function (rowIdx, prop, val) {
-        var newData = _this.state.data;
-        var row = copy(_this.state.data.attendees[rowIdx]);
-        row[prop] = val;
-        var rows = _this.state.data.attendees.slice();
-        rows[rowIdx] = row;
-        newData.attendees = rows;
-
-        _this.setState({ data: newData });
-        //console.log(this.state);
-      };
-
-      this.removeRow = function (rowIdx) {
-        var newData = _this.state.data;
-        newData.attendees.splice(rowIdx, 1);
-        _this.setState({ data: newData });
-      };
-
-      this.handleButtonClick = function () {
-        var newData = _this.state.data;
-        newData.attendees.push(attendee);
-        _this.setState({ data: newData });
-      };
-
-      this.handleCommentChange = function (e) {
-        var newData = _this.state.data;
-        newData.comment = e.target.value;
-        _this.setState({ data: newData });
-      };
-
-      this.handleEmailChange = function (e) {
-        var newData = _this.state.data;
-        newData.email = e.target.value;
-        _this.setState({ data: newData });
-      };
-
-      this.handleHotelChange = function () {
-        var newData = _this.state.data;
-        newData.hotel.needsReservation = !newData.hotel.needsReservation;
-        _this.setState({ data: newData });
-      };
-
-      this.handleReservationCountChange = function (e) {
-        var newData = _this.state.data;
-        newData.hotel.numberOfRooms = e.target.value;
-        _this.setState({ data: newData });
-        //console.log(this.state);
-      };
-
-      this.handleReservationCommentChange = function (e) {
-        var newData = _this.state.data;
-        newData.hotel.comment = e.target.value;
-        _this.setState({ data: newData });
-      };
-
-      this.handleAttendingChange = function () {
-        var newData = _this.state.data;
-        newData.attending = !newData.attending;
-        _this.setState({ data: newData });
-      };
-
-      this.handleNotAttendingNameChange = function (e) {
-        var newData = _this.state.data;
-        newData.notAttendingName = e.target.value;
-        _this.setState({ data: newData });
-      };
-
-      this.handleSubmitButtonClick = function () {
-        _this.setState({ loading: true });
-        //console.log("should be loading from submit click, state: ", this.state);
-
-        var saveData = _this.state.data;
-        if (saveData["lastModified"]) delete saveData["lastModified"];
-
-        //console.log("in submit button click save");
-
-        _this.props.rsvp.save(saveData, {
-          success: _this.submitSuccess,
-          error: _this.submitFailure
-        });
-      };
-
-      this.submitSuccess = function (theRsvp) {
-        //console.log("record saved after submit button press", theRsvp);
-        _this.setState({ "loading": false });
-        try {
-          _reactCookie2['default'].save('rsvp', theRsvp);
-        } catch (e) {}
-        //console.log(e);
-
-        //console.log("should be done with saving, state: ", this.state);
-        var obj = {};
-        obj = copy(theRsvp.attributes);
-        obj.id = theRsvp.id;
-        _this.props.syncData(obj);
-        _this.props.syncSubmitted(true);
-      };
-
-      this.submitFailure = function (theRsvp, error) {
-        console.log("record failed", theRsvp, error);
-      };
-
-      this.handleEditButton = function () {
-        _this.setState({ submitted: false });
-      };
-
-      this.state = { data: this.props.theData, rsvp: this.props.rsvp, loading: false, submitted: this.props.submitted };
-    }
-
-    _createClass(RsvpEditor, [{
-      key: 'render',
-      value: function render() {
-        var isRequestActive = this.state.data.hotel.comment !== "" ? "active" : "";
-        var needsRoom = this.state.data.hotel.needsReservation ? _react2['default'].createElement(
-          'div',
-          null,
-          _react2['default'].createElement(
-            'div',
-            { className: 'col s3 input-field' },
-            _react2['default'].createElement('input', { type: 'text', onChange: this.handleReservationCountChange, value: this.state.data.hotel.numberOfRooms }),
-            _react2['default'].createElement(
-              'label',
-              { className: 'active' },
-              "How Many?"
-            )
-          )
-        ) : "";
-        var chk = this.state.data.hotel.needsReservation ? true : false;
-        var attendingChk = this.state.data.attending;
-        var isCommentActive = this.state.data.comment !== "" ? "active" : "";
-        var isEmailActive = this.state.data.email !== "" ? "active" : "";
-        var isAttendingClass = this.state.data.attending ? "" : "hide";
-        var isNotAttendingClass = !this.state.data.attending ? "" : "hide";
-        var isNotAttendingNameActive = this.state.data.notAttendingName !== "" ? "active" : "";
-        var modifiedString = "";
-
-        var commentClass = this.state.data.attending ? "col s8 input-field" : "col s12 input-field";
-        var emailClass = this.state.data.attending ? "col s4 input-field" : "hide";
-
-        if (this.state.data.hasOwnProperty("lastModified")) {
-          var dateString = this.state.data.lastModified.toString();
-          modifiedString = _react2['default'].createElement(
-            'div',
-            null,
-            'This RSVP was last modified on: ',
-            dateString
-          );
-        }
-
-        if (this.state.submitted) {
-          if (this.state.loading) {
-            return _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'div',
-                { className: 'col s4 offset-4' },
-                _react2['default'].createElement(_reactMaterialize.Preloader, { size: 'big' })
-              )
-            );
-          } else {
-            return _react2['default'].createElement(_RsvpSummary2['default'], { data: this.state.data, handleEditButton: this.handleEditButton });
-          }
-        } else {
-          return _react2['default'].createElement(
-            'div',
-            null,
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h4',
-                null,
-                'Will you be able to attend?'
-              ),
-              _react2['default'].createElement(_reactMaterialize.Input, { name: 'attending', type: 'switch', offLabel: 'No', onLabel: 'Yes', onChange: this.handleAttendingChange, checked: attendingChk })
-            ),
-            _react2['default'].createElement(
-              'div',
-              { className: isNotAttendingClass + " row" },
-              _react2['default'].createElement(
-                'h6',
-                null,
-                'Name on Invitation'
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  'div',
-                  { className: 'col s12 input-field' },
-                  _react2['default'].createElement('input', { value: this.state.data.notAttendingName, onChange: this.handleNotAttendingNameChange, type: 'text' }),
-                  _react2['default'].createElement(
-                    'label',
-                    { className: isNotAttendingNameActive },
-                    'Name'
-                  )
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              { className: isAttendingClass },
-              _react2['default'].createElement(
-                'h6',
-                null,
-                'Attendees (',
-                this.state.data.attendees.length,
-                ')'
-              ),
-              _react2['default'].createElement(_PeopleWidget2['default'], { data: this.state.data.attendees, onCellChange: this.handleCellChange, removeRow: this.removeRow }),
-              _react2['default'].createElement(
-                'div',
-                { className: 'col s2 offset-s10 right-align' },
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { floating: true, onClick: this.handleButtonClick, waves: 'light' },
-                  _react2['default'].createElement(
-                    _reactMaterialize.Icon,
-                    null,
-                    'add'
-                  )
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              { className: isAttendingClass },
-              _react2['default'].createElement(
-                'h6',
-                null,
-                'Hotel Information'
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(_reactMaterialize.Input, { label: 'Would you like us to block off a room for you?', s: 9, type: 'checkbox', onChange: this.handleHotelChange, checked: chk }),
-                needsRoom
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h6',
-                null,
-                'Extra Info'
-              ),
-              _react2['default'].createElement(
-                _reactMaterialize.Row,
-                null,
-                _react2['default'].createElement(
-                  'div',
-                  { className: commentClass },
-                  _react2['default'].createElement('input', { value: this.state.data.comment, onChange: this.handleCommentChange, type: 'text' }),
-                  _react2['default'].createElement(
-                    'label',
-                    { className: isCommentActive },
-                    'Comment / Question'
-                  )
-                ),
-                _react2['default'].createElement(
-                  'div',
-                  { className: emailClass },
-                  _react2['default'].createElement('input', { value: this.state.data.email, onChange: this.handleEmailChange, type: 'text' }),
-                  _react2['default'].createElement(
-                    'label',
-                    { className: isEmailActive },
-                    'Email'
-                  )
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'div',
-                { className: 'col offset-s8 s4 right-align' },
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { onClick: this.handleSubmitButtonClick },
-                  'Submit'
-                )
-              )
-            )
-          );
-        }
-      }
-    }]);
-
-    return RsvpEditor;
-  })(_react.Component);
-
-  ;
-
-  exports['default'] = RsvpEditor;
-  module.exports = exports['default'];
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, '__esModule', {
-    value: true
-  });
-
-  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var _react = __webpack_require__(1);
-
-  var _react2 = _interopRequireDefault(_react);
-
-  var _reactMaterialize = __webpack_require__(2);
-
-  var _mandrillMinJs = __webpack_require__(16);
-
-  var _mandrillMinJs2 = _interopRequireDefault(_mandrillMinJs);
-
-  //console.log(Mandrill)
-  var m = new _mandrillMinJs2['default'].mandrill.Mandrill('vIMEddhNNLrr-WncvmudWQ');
-
-  function capitalize(theString) {
-    return theString.charAt(0).toUpperCase() + theString.slice(1);
-  }
-
-  var RsvpSummary = (function (_Component) {
-    _inherits(RsvpSummary, _Component);
-
-    function RsvpSummary(props) {
-      var _this = this;
-
-      _classCallCheck(this, RsvpSummary);
-
-      _get(Object.getPrototypeOf(RsvpSummary.prototype), 'constructor', this).call(this, props);
-      //console.log("reservation summary props: ", props);
-
-      this.sendEmail = function () {
-        var nameString = _this.props.data.attendees[0].firstName;
-
-        for (var i = 1; i < _this.props.data.attendees.length; i++) {
-          if (i == _this.props.data.attendees.length - 1) {
-            nameString += ", and " + _this.props.data.attendees[i].firstName;
-          } else {
-            nameString += ", " + _this.props.data.attendees[i].firstName;
-          }
-        }
-
-        var roomString = _this.props.data.hotel.numberOfRooms > 1 ? "rooms." : "room.";
-
-        _this.setState({ emailed: true });
-        _this.setState({ emailButtonText: "Sending..." });
-        m.call("messages/send-template", {
-          key: 'vIMEddhNNLrr-WncvmudWQ',
-          template_name: "wedding-template",
-          template_content: [{ "name": "firstNameString",
-            "content": nameString }, { "name": "hotelString",
-            "content": _this.props.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.props.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
-            "content": "timandmaddy.com/rsvp?" + _this.props.data.id }],
-          message: {
-            subject: "RSVP",
-            from_email: "rsvp@timandmaddy.com",
-            from_name: "Tim & Maddy",
-            to: [{
-              email: _this.props.data.email,
-              name: "Guest"
-            }],
-            global_merge_vars: [{ "name": "firstNameString",
-              "content": nameString }, { "name": "hotelString",
-              "content": _this.props.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.props.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
-              "content": "timandmaddy.com/rsvp?" + _this.props.data.id }]
-          },
-          async: true
-        }, function (httpResponse) {
-          //console.log(httpResponse);
-          _this.setState({ emailButtonText: "Sent!" });
-        }, function (httpResponse) {
-          console.error(httpResponse);
-        });
-      };
-
-      this.state = {};
-      this.state.emailed = false;
-      this.state.emailButtonText = "Send RSVP to Email";
-
-      if (this.props.data.email == '') {
-        this.state.emailed = true;
-      }
-    }
-
-    _createClass(RsvpSummary, [{
-      key: 'render',
-      value: function render() {
-        var peopleRows = this.props.data.attendees.map(function (rowData, index) {
-          return _react2['default'].createElement(
-            'tr',
-            { key: "people" + index },
-            _react2['default'].createElement(
-              'td',
-              null,
-              rowData.firstName + " " + rowData.lastName
-            ),
-            _react2['default'].createElement(
-              'td',
-              { className: 'hide' },
-              capitalize(rowData.food)
-            ),
-            _react2['default'].createElement(
-              'td',
-              { className: 'hide' },
-              rowData.allergies === "" ? "None" : rowData.allergies
-            ),
-            _react2['default'].createElement(
-              'td',
-              null,
-              rowData.underage ? "Yes" : "No"
-            )
-          );
-        }, this);
-        var roomString = this.props.data.hotel.numberOfRooms > 1 ? "rooms." : "room.";
-        var hotelReservationString = this.props.data.hotel.needsReservation ? _react2['default'].createElement(
-          'p',
-          null,
-          'We will go ahead and reserve you ',
-          _react2['default'].createElement(
-            'strong',
-            null,
-            ' ',
-            this.props.data.hotel.numberOfRooms,
-            ' '
-          ),
-          ' ',
-          roomString,
-          ' '
-        ) : _react2['default'].createElement(
-          'p',
-          null,
-          'We will not reserve you a room.'
-        );
-        var emailString = this.props.data.email !== '' ? this.props.data.email : "none";
-        var hasEmailClass = this.props.data.email == '' ? 'hide col s12' : 'col s12';
-        var isAttendingClass = this.props.data.attending ? "" : "hide";
-        var isNotAttendingClass = this.props.data.attending ? "hide" : "";
-        var notAttendingMessage = this.props.data.attending ? "" : "We're sorry to hear you won't make it!!";
-
-        if (this.props.data.attending) {
-          return _react2['default'].createElement(
-            'div',
-            null,
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h2',
-                null,
-                'Thank you!'
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h5',
-                null,
-                'RSVP Summary'
-              ),
-              _react2['default'].createElement(
-                'table',
-                null,
-                _react2['default'].createElement(
-                  'thead',
-                  null,
-                  _react2['default'].createElement(
-                    'tr',
-                    null,
-                    _react2['default'].createElement(
-                      'th',
-                      { 'data-field': 'name' },
-                      'Name'
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      { className: 'hide', 'data-field': 'food' },
-                      'Food Choice'
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      { className: 'hide', 'data-field': 'allergies' },
-                      'Allergies'
-                    ),
-                    _react2['default'].createElement(
-                      'th',
-                      { 'data-field': 'underage' },
-                      'Underage'
-                    )
-                  )
-                ),
-                _react2['default'].createElement(
-                  'tbody',
-                  null,
-                  peopleRows
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h5',
-                null,
-                'Hotel Summary'
-              ),
-              hotelReservationString
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h5',
-                null,
-                'Contact Info'
-              ),
-              _react2['default'].createElement(
-                'div',
-                { className: 'col s12' },
-                'E-mail: ',
-                emailString
-              ),
-              _react2['default'].createElement(
-                'div',
-                { className: hasEmailClass },
-                _react2['default'].createElement(
-                  _reactMaterialize.Button,
-                  { onClick: this.sendEmail, disabled: this.state.emailed },
-                  this.state.emailButtonText
-                )
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Button,
-              { onClick: this.props.handleEditButton },
-              'Edit my RSVP'
-            )
-          );
-        } else {
-          return _react2['default'].createElement(
-            'div',
-            null,
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h2',
-                null,
-                'Thank you!'
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Row,
-              null,
-              _react2['default'].createElement(
-                'h6',
-                null,
-                notAttendingMessage
-              )
-            ),
-            _react2['default'].createElement(
-              _reactMaterialize.Button,
-              { onClick: this.props.handleEditButton },
-              'Edit my RSVP'
-            )
-          );
-        }
-      }
-    }]);
-
-    return RsvpSummary;
-  })(_react.Component);
-
-  exports['default'] = RsvpSummary;
-  module.exports = exports['default'];
-
-/***/ },
-/* 16 */
 /***/ function(module, exports) {
 
   // Generated by CoffeeScript 1.10.0
@@ -1938,6 +645,1351 @@ module.exports =
       }));if (/^[\],:{}\s]*$/.test(text.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]").replace(/(?:^|:|,)(?:\s*\[)+/g, ""))) return j = eval("(" + text + ")"), typeof reviver == "function" ? walk({ "": j }, "") : j;throw new SyntaxError("JSON.parse");
     });
   })();
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  var _fbjsLibExecutionEnvironment = __webpack_require__(7);
+
+  var _historyLibCreateBrowserHistory = __webpack_require__(27);
+
+  var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
+
+  var _historyLibUseQueries = __webpack_require__(28);
+
+  var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
+
+  var location = _fbjsLibExecutionEnvironment.canUseDOM ? (0, _historyLibUseQueries2['default'])(_historyLibCreateBrowserHistory2['default'])() : {};
+
+  exports['default'] = location;
+  module.exports = exports['default'];
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+  module.exports = require("fbjs/lib/ExecutionEnvironment");
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-cookie");
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactMaterialize = __webpack_require__(2);
+
+  var Cell = (function (_Component) {
+    _inherits(Cell, _Component);
+
+    function Cell(props) {
+      var _this = this;
+
+      _classCallCheck(this, Cell);
+
+      _get(Object.getPrototypeOf(Cell.prototype), 'constructor', this).call(this, props);
+
+      this.handleChange = function (e) {
+        _this.props.onChange(e.target.value);
+      };
+    }
+
+    _createClass(Cell, [{
+      key: 'render',
+      value: function render() {
+        var active = this.props.data === "" ? "" : "active";
+        return _react2['default'].createElement(
+          'div',
+          { className: 'col s4 input-field' },
+          _react2['default'].createElement('input', { value: this.props.data, onChange: this.handleChange, type: 'text' }),
+          _react2['default'].createElement(
+            'label',
+            { className: active },
+            this.props.label
+          )
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        data: _react2['default'].PropTypes.string.isRequired,
+        label: _react2['default'].PropTypes.string.isRequired,
+        onChange: _react2['default'].PropTypes.func.isRequired
+      },
+      enumerable: true
+    }]);
+
+    return Cell;
+  })(_react.Component);
+
+  exports['default'] = Cell;
+  module.exports = exports['default'];
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  __webpack_require__(22);
+
+  var _Link = __webpack_require__(4);
+
+  var _Link2 = _interopRequireDefault(_Link);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'footer',
+          { className: 'page-footer' },
+          _react2['default'].createElement('div', { className: 'container' }),
+          _react2['default'].createElement(
+            'div',
+            { className: 'footer-copyright' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'container center-align' },
+              _react2['default'].createElement(
+                'span',
+                { className: 'left' },
+                '© Tim Carlson 2016'
+              ),
+              _react2['default'].createElement(
+                'span',
+                { className: 'right' },
+                'artwork and font made by ',
+                _react2['default'].createElement(
+                  'a',
+                  { href: 'http://toysbyjeanelise.com', target: '_blank', className: 'grey-text text-lighten-4' },
+                  'Jean Elise'
+                )
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactMaterialize = __webpack_require__(2);
+
+  var _Cell = __webpack_require__(9);
+
+  var _Cell2 = _interopRequireDefault(_Cell);
+
+  var FormRow = (function (_Component) {
+    _inherits(FormRow, _Component);
+
+    function FormRow(props) {
+      var _this = this;
+
+      _classCallCheck(this, FormRow);
+
+      _get(Object.getPrototypeOf(FormRow.prototype), 'constructor', this).call(this, props);
+
+      this.handleChange = function (prop, value) {
+        _this.props.onCellChange(prop, value);
+      };
+
+      this.handleSelectChange = function () {
+        var value = _this.refs.sel.value;
+        _this.props.onCellChange("food", value);
+      };
+
+      this.handleAgeChange = function (prop, value) {
+        _this.props.onCellChange("underage", !_this.props.data.underage);
+      };
+
+      this.componentDidMount = function () {
+        $(_this.refs.sel).material_select(_this.handleSelectChange);
+      };
+
+      var under21 = false;
+      //console.log("props", props);
+    }
+
+    _createClass(FormRow, [{
+      key: 'render',
+      value: function render() {
+        var needsButton = this.props.needsButton ? _react2['default'].createElement(
+          'div',
+          { className: 'card-action valign-wrapper' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'col s4 offset-s8 valign right-align' },
+            'Remove ',
+            _react2['default'].createElement(
+              _reactMaterialize.Button,
+              { floating: true, onClick: this.props.removeRow, waves: 'light' },
+              _react2['default'].createElement(
+                _reactMaterialize.Icon,
+                null,
+                'remove'
+              )
+            )
+          )
+        ) : "";
+        return _react2['default'].createElement(
+          _reactMaterialize.Row,
+          { className: 'reduced-row-padding row' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'col s12' },
+            _react2['default'].createElement(
+              'div',
+              { className: 'card green lighten-5' },
+              _react2['default'].createElement(
+                'div',
+                { className: 'card-content' },
+                _react2['default'].createElement(
+                  'span',
+                  { className: 'card-title black-text' },
+                  this.props.data.firstName + " " + this.props.data.lastName
+                ),
+                _react2['default'].createElement(
+                  _reactMaterialize.Row,
+                  null,
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'valign-wrapper' },
+                    _react2['default'].createElement(_Cell2['default'], { className: 'valign', data: this.props.data.firstName, label: 'First Name', onChange: this.handleChange.bind(null, "firstName") }),
+                    _react2['default'].createElement(_Cell2['default'], { className: 'valign', data: this.props.data.lastName, label: 'Last Name', onChange: this.handleChange.bind(null, "lastName") }),
+                    _react2['default'].createElement(_reactMaterialize.Input, { className: 'valign', type: 'checkbox', s: 4, label: 'Under 21?', ref: 'age', onChange: this.handleAgeChange, checked: this.props.data.underage })
+                  )
+                ),
+                _react2['default'].createElement(
+                  _reactMaterialize.Row,
+                  { className: 'hide' },
+                  _react2['default'].createElement(
+                    'div',
+                    { className: 'input-field col s4 hide' },
+                    _react2['default'].createElement(
+                      'select',
+                      { ref: 'sel', value: this.props.data.food, onChange: this.handleSelectChange, className: 'hidden' },
+                      _react2['default'].createElement(
+                        'option',
+                        { value: 'schnitzel', 'data-icon': 'schnitzel.jpg', className: 'circle' },
+                        "Schnitzel"
+                      ),
+                      _react2['default'].createElement(
+                        'option',
+                        { value: 'chicken' },
+                        "Chicken"
+                      ),
+                      _react2['default'].createElement(
+                        'option',
+                        { value: 'vegetarian' },
+                        "Vegetarian"
+                      )
+                    ),
+                    _react2['default'].createElement(
+                      'label',
+                      { className: 'hide' },
+                      "Food"
+                    )
+                  ),
+                  _react2['default'].createElement(_Cell2['default'], { className: 'hide', data: this.props.data.allergies, label: 'Allergies?', onChange: this.handleChange.bind(null, "allergies") })
+                )
+              ),
+              needsButton
+            )
+          ),
+          _react2['default'].createElement('div', { className: 'divider' })
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        data: _react2['default'].PropTypes.object.isRequired,
+        onCellChange: _react2['default'].PropTypes.func.isRequired
+      },
+      enumerable: true
+    }]);
+
+    return FormRow;
+  })(_react.Component);
+
+  exports['default'] = FormRow;
+  module.exports = exports['default'];
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  __webpack_require__(23);
+
+  var _Navigation = __webpack_require__(13);
+
+  var _Navigation2 = _interopRequireDefault(_Navigation);
+
+  var _Footer = __webpack_require__(10);
+
+  var _Footer2 = _interopRequireDefault(_Footer);
+
+  var Layout = (function (_Component) {
+    _inherits(Layout, _Component);
+
+    function Layout() {
+      _classCallCheck(this, Layout);
+
+      _get(Object.getPrototypeOf(Layout.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(Layout, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'div',
+          null,
+          _react2['default'].createElement(
+            'div',
+            { className: 'Layout' },
+            _react2['default'].createElement(_Navigation2['default'], null),
+            this.props.children
+          ),
+          _react2['default'].createElement(_Footer2['default'], null)
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        children: _react.PropTypes.element.isRequired
+      },
+      enumerable: true
+    }]);
+
+    return Layout;
+  })(_react.Component);
+
+  exports['default'] = Layout;
+  module.exports = exports['default'];
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+  /**
+   * React Static Boilerplate
+   * https://github.com/koistya/react-static-boilerplate
+   * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
+   */
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  __webpack_require__(25);
+
+  var _Link = __webpack_require__(4);
+
+  var _Link2 = _interopRequireDefault(_Link);
+
+  var _default = (function (_Component) {
+    _inherits(_default, _Component);
+
+    function _default() {
+      _classCallCheck(this, _default);
+
+      _get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+    }
+
+    _createClass(_default, [{
+      key: 'render',
+      value: function render() {
+        return _react2['default'].createElement(
+          'ul',
+          { className: 'Navigation', role: 'menu' },
+          _react2['default'].createElement(
+            'li',
+            { className: 'Navigation-item' },
+            _react2['default'].createElement(
+              'a',
+              { className: 'Navigation-link', href: '/', onClick: _Link2['default'].handleClick },
+              'Home'
+            )
+          ),
+          _react2['default'].createElement(
+            'li',
+            { className: 'Navigation-item' },
+            _react2['default'].createElement(
+              'a',
+              { className: 'Navigation-link', href: '/rsvp', onClick: _Link2['default'].handleClick },
+              'RSVP'
+            )
+          ),
+          _react2['default'].createElement(
+            'li',
+            { className: 'Navigation-item' },
+            _react2['default'].createElement(
+              'a',
+              { className: 'Navigation-link', href: '/registry', onClick: _Link2['default'].handleClick },
+              'Registry'
+            )
+          )
+        );
+      }
+    }]);
+
+    return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _FormRow = __webpack_require__(11);
+
+  var _FormRow2 = _interopRequireDefault(_FormRow);
+
+  var PeopleWidget = (function (_Component) {
+    _inherits(PeopleWidget, _Component);
+
+    function PeopleWidget(props) {
+      _classCallCheck(this, PeopleWidget);
+
+      _get(Object.getPrototypeOf(PeopleWidget.prototype), 'constructor', this).call(this, props);
+    }
+
+    _createClass(PeopleWidget, [{
+      key: 'render',
+      value: function render() {
+        var rows = this.props.data.map(function (rowData, index) {
+          var needButton = index === 0 ? false : true;
+          return _react2['default'].createElement(_FormRow2['default'], { needsButton: needButton,
+            key: index,
+            data: rowData,
+            onCellChange: this.props.onCellChange.bind(null, index),
+            removeRow: this.props.removeRow.bind(null, index),
+            isUnder21: rowData.underage });
+        }, this);
+
+        return _react2['default'].createElement(
+          'div',
+          null,
+          rows
+        );
+      }
+    }], [{
+      key: 'propTypes',
+      value: {
+        data: _react2['default'].PropTypes.array.isRequired,
+        onCellChange: _react2['default'].PropTypes.func.isRequired
+      },
+      enumerable: true
+    }]);
+
+    return PeopleWidget;
+  })(_react.Component);
+
+  exports['default'] = PeopleWidget;
+  module.exports = exports['default'];
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactMaterialize = __webpack_require__(2);
+
+  var _PeopleWidget = __webpack_require__(14);
+
+  var _PeopleWidget2 = _interopRequireDefault(_PeopleWidget);
+
+  var _RsvpSummary = __webpack_require__(16);
+
+  var _RsvpSummary2 = _interopRequireDefault(_RsvpSummary);
+
+  var _reactCookie = __webpack_require__(8);
+
+  var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
+  var _mandrillMinJs = __webpack_require__(5);
+
+  var _mandrillMinJs2 = _interopRequireDefault(_mandrillMinJs);
+
+  var m = new _mandrillMinJs2['default'].mandrill.Mandrill('vIMEddhNNLrr-WncvmudWQ');
+
+  var attendee = {
+    firstName: "",
+    lastName: "",
+    underage: false,
+    food: "schnitzel",
+    allergies: ""
+  };
+
+  var initial = {
+    comment: "",
+    email: "",
+    attendees: [attendee],
+    hotel: {
+      needsReservation: false,
+      numberOfRooms: 1,
+      comment: ""
+    },
+    submitted: false,
+    attending: false,
+    notAttendingName: ""
+  };
+
+  function copy(obj) {
+    var newObj = {};
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        newObj[key] = obj[key];
+      }
+    }
+    return newObj;
+  }
+
+  var RsvpEditor = (function (_Component) {
+    _inherits(RsvpEditor, _Component);
+
+    function RsvpEditor(props) {
+      var _this = this;
+
+      _classCallCheck(this, RsvpEditor);
+
+      _get(Object.getPrototypeOf(RsvpEditor.prototype), 'constructor', this).call(this, props);
+      ////console.log("setting up dirty data from attributes: ", this.props.rsvp.attributes);
+
+      this.componentWillReceiveProps = function (newProps) {
+        if (newProps.theData !== _this.state.data) {
+          _this.setState({ data: newProps.theData });
+        }
+        if (newProps.rsvp !== _this.state.rsvp) {
+          _this.setState({ rsvp: newProps.rsvp });
+        }
+
+        if (newProps.submitted !== _this.state.submitted) {
+          _this.setState({ submitted: newProps.submitted });
+        }
+
+        ////console.log("component recieved props: ", newProps);
+        //console.log("component current state: ", this.state);
+      };
+
+      this.handleCellChange = function (rowIdx, prop, val) {
+        var newData = _this.state.data;
+        var row = copy(_this.state.data.attendees[rowIdx]);
+        row[prop] = val;
+        var rows = _this.state.data.attendees.slice();
+        rows[rowIdx] = row;
+        newData.attendees = rows;
+
+        _this.setState({ data: newData });
+        //console.log(this.state);
+      };
+
+      this.removeRow = function (rowIdx) {
+        var newData = _this.state.data;
+        newData.attendees.splice(rowIdx, 1);
+        _this.setState({ data: newData });
+      };
+
+      this.handleButtonClick = function () {
+        var newData = _this.state.data;
+        newData.attendees.push(attendee);
+        _this.setState({ data: newData });
+      };
+
+      this.handleCommentChange = function (e) {
+        var newData = _this.state.data;
+        newData.comment = e.target.value;
+        _this.setState({ data: newData });
+      };
+
+      this.handleEmailChange = function (e) {
+        var newData = _this.state.data;
+        newData.email = e.target.value;
+        _this.setState({ data: newData });
+      };
+
+      this.handleHotelChange = function () {
+        var newData = _this.state.data;
+        newData.hotel.needsReservation = !newData.hotel.needsReservation;
+        _this.setState({ data: newData });
+      };
+
+      this.handleReservationCountChange = function (e) {
+        var newData = _this.state.data;
+        newData.hotel.numberOfRooms = e.target.value;
+        _this.setState({ data: newData });
+        //console.log(this.state);
+      };
+
+      this.handleReservationCommentChange = function (e) {
+        var newData = _this.state.data;
+        newData.hotel.comment = e.target.value;
+        _this.setState({ data: newData });
+      };
+
+      this.handleAttendingChange = function () {
+        var newData = _this.state.data;
+        newData.attending = !newData.attending;
+        _this.setState({ data: newData });
+      };
+
+      this.handleNotAttendingNameChange = function (e) {
+        var newData = _this.state.data;
+        newData.notAttendingName = e.target.value;
+        _this.setState({ data: newData });
+      };
+
+      this.handleSubmitButtonClick = function () {
+        _this.setState({ loading: true });
+        //console.log("should be loading from submit click, state: ", this.state);
+
+        var saveData = _this.state.data;
+        if (saveData["lastModified"]) delete saveData["lastModified"];
+
+        //console.log("in submit button click save");
+
+        _this.props.rsvp.save(saveData, {
+          success: _this.submitSuccess,
+          error: _this.submitFailure
+        });
+      };
+
+      this.sendEmailCopy = function () {
+        var nameString = _this.state.data.attendees[0].firstName;
+
+        for (var i = 1; i < _this.state.data.attendees.length; i++) {
+          if (i == _this.state.data.attendees.length - 1) {
+            nameString += ", and " + _this.state.data.attendees[i].firstName;
+          } else {
+            nameString += ", " + _this.state.data.attendees[i].firstName;
+          }
+        }
+
+        var roomString = _this.state.data.hotel.numberOfRooms > 1 ? "rooms." : "room.";
+
+        m.call("messages/send-template", {
+          key: 'vIMEddhNNLrr-WncvmudWQ',
+          template_name: "wedding-template",
+          template_content: [{ "name": "firstNameString",
+            "content": nameString }, { "name": "hotelString",
+            "content": _this.state.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.state.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
+            "content": "timandmaddy.com/rsvp?" + _this.state.data.id }],
+          message: {
+            subject: "RSVP for " + nameString,
+            from_email: "rsvp@timandmaddy.com",
+            from_name: "Tim & Maddy",
+            to: [{
+              email: "mkundel91@gmail.com",
+              name: "Maddy"
+            }, {
+              email: "tim.carlson@gmail.com",
+              name: "Tim"
+            }],
+            global_merge_vars: [{ "name": "firstNameString",
+              "content": nameString }, { "name": "hotelString",
+              "content": _this.state.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.state.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
+              "content": "timandmaddy.com/rsvp?" + _this.state.data.id }]
+          },
+          async: true
+        }, function (httpResponse) {
+          //console.log(httpResponse);
+
+        }, function (httpResponse) {
+          console.error(httpResponse);
+        });
+      };
+
+      this.submitSuccess = function (theRsvp) {
+        //console.log("record saved after submit button press", theRsvp);
+        _this.setState({ "loading": false });
+        try {
+          _reactCookie2['default'].save('rsvp', theRsvp);
+        } catch (e) {}
+        //console.log(e);
+
+        //console.log("should be done with saving, state: ", this.state);
+        var obj = {};
+        obj = copy(theRsvp.attributes);
+        obj.id = theRsvp.id;
+        _this.props.syncData(obj);
+        _this.props.syncSubmitted(true);
+        _this.sendEmailCopy();
+      };
+
+      this.submitFailure = function (theRsvp, error) {
+        console.log("record failed", theRsvp, error);
+      };
+
+      this.handleEditButton = function () {
+        _this.setState({ submitted: false });
+      };
+
+      this.state = { data: this.props.theData, rsvp: this.props.rsvp, loading: false, submitted: this.props.submitted };
+    }
+
+    _createClass(RsvpEditor, [{
+      key: 'render',
+      value: function render() {
+        var isRequestActive = this.state.data.hotel.comment !== "" ? "active" : "";
+        var needsRoom = this.state.data.hotel.needsReservation ? _react2['default'].createElement(
+          'div',
+          null,
+          _react2['default'].createElement(
+            'div',
+            { className: 'col s3 input-field' },
+            _react2['default'].createElement('input', { type: 'text', onChange: this.handleReservationCountChange, value: this.state.data.hotel.numberOfRooms }),
+            _react2['default'].createElement(
+              'label',
+              { className: 'active' },
+              "How Many?"
+            )
+          )
+        ) : "";
+        var chk = this.state.data.hotel.needsReservation ? true : false;
+        var attendingChk = this.state.data.attending;
+        var isCommentActive = this.state.data.comment !== "" ? "active" : "";
+        var isEmailActive = this.state.data.email !== "" ? "active" : "";
+        var isAttendingClass = this.state.data.attending ? "" : "hide";
+        var isNotAttendingClass = !this.state.data.attending ? "" : "hide";
+        var isNotAttendingNameActive = this.state.data.notAttendingName !== "" ? "active" : "";
+        var modifiedString = "";
+
+        var commentClass = this.state.data.attending ? "col s8 input-field" : "col s12 input-field";
+        var emailClass = this.state.data.attending ? "col s4 input-field" : "hide";
+
+        if (this.state.data.hasOwnProperty("lastModified")) {
+          var dateString = this.state.data.lastModified.toString();
+          modifiedString = _react2['default'].createElement(
+            'div',
+            null,
+            'This RSVP was last modified on: ',
+            dateString
+          );
+        }
+
+        if (this.state.submitted) {
+          if (this.state.loading) {
+            return _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'div',
+                { className: 'col s4 offset-4' },
+                _react2['default'].createElement(_reactMaterialize.Preloader, { size: 'big' })
+              )
+            );
+          } else {
+            return _react2['default'].createElement(_RsvpSummary2['default'], { data: this.state.data, handleEditButton: this.handleEditButton });
+          }
+        } else {
+          return _react2['default'].createElement(
+            'div',
+            null,
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h4',
+                null,
+                'Will you be able to attend?'
+              ),
+              _react2['default'].createElement(_reactMaterialize.Input, { name: 'attending', type: 'switch', offLabel: 'No', onLabel: 'Yes', onChange: this.handleAttendingChange, checked: attendingChk })
+            ),
+            _react2['default'].createElement(
+              'div',
+              { className: isNotAttendingClass + " row" },
+              _react2['default'].createElement(
+                'h6',
+                null,
+                'Name on Invitation'
+              ),
+              _react2['default'].createElement(
+                _reactMaterialize.Row,
+                null,
+                _react2['default'].createElement(
+                  'div',
+                  { className: 'col s12 input-field' },
+                  _react2['default'].createElement('input', { value: this.state.data.notAttendingName, onChange: this.handleNotAttendingNameChange, type: 'text' }),
+                  _react2['default'].createElement(
+                    'label',
+                    { className: isNotAttendingNameActive },
+                    'Name'
+                  )
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              { className: isAttendingClass },
+              _react2['default'].createElement(
+                'h6',
+                null,
+                'Attendees (',
+                this.state.data.attendees.length,
+                ')'
+              ),
+              _react2['default'].createElement(_PeopleWidget2['default'], { data: this.state.data.attendees, onCellChange: this.handleCellChange, removeRow: this.removeRow }),
+              _react2['default'].createElement(
+                'div',
+                { className: 'col s2 offset-s10 right-align' },
+                _react2['default'].createElement(
+                  _reactMaterialize.Button,
+                  { floating: true, onClick: this.handleButtonClick, waves: 'light' },
+                  _react2['default'].createElement(
+                    _reactMaterialize.Icon,
+                    null,
+                    'add'
+                  )
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              { className: isAttendingClass },
+              _react2['default'].createElement(
+                'h6',
+                null,
+                'Hotel Information'
+              ),
+              _react2['default'].createElement(
+                _reactMaterialize.Row,
+                null,
+                _react2['default'].createElement(_reactMaterialize.Input, { label: 'Would you like us to block off a room for you?', s: 9, type: 'checkbox', onChange: this.handleHotelChange, checked: chk }),
+                needsRoom
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h6',
+                null,
+                'Extra Info'
+              ),
+              _react2['default'].createElement(
+                _reactMaterialize.Row,
+                null,
+                _react2['default'].createElement(
+                  'div',
+                  { className: commentClass },
+                  _react2['default'].createElement('input', { value: this.state.data.comment, onChange: this.handleCommentChange, type: 'text' }),
+                  _react2['default'].createElement(
+                    'label',
+                    { className: isCommentActive },
+                    'Comment / Question'
+                  )
+                ),
+                _react2['default'].createElement(
+                  'div',
+                  { className: emailClass },
+                  _react2['default'].createElement('input', { value: this.state.data.email, onChange: this.handleEmailChange, type: 'text' }),
+                  _react2['default'].createElement(
+                    'label',
+                    { className: isEmailActive },
+                    'Email'
+                  )
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'div',
+                { className: 'col offset-s8 s4 right-align' },
+                _react2['default'].createElement(
+                  _reactMaterialize.Button,
+                  { onClick: this.handleSubmitButtonClick },
+                  'Submit'
+                )
+              )
+            )
+          );
+        }
+      }
+    }]);
+
+    return RsvpEditor;
+  })(_react.Component);
+
+  ;
+
+  exports['default'] = RsvpEditor;
+  module.exports = exports['default'];
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _reactMaterialize = __webpack_require__(2);
+
+  var _mandrillMinJs = __webpack_require__(5);
+
+  var _mandrillMinJs2 = _interopRequireDefault(_mandrillMinJs);
+
+  //console.log(Mandrill)
+  var m = new _mandrillMinJs2['default'].mandrill.Mandrill('vIMEddhNNLrr-WncvmudWQ');
+
+  function capitalize(theString) {
+    return theString.charAt(0).toUpperCase() + theString.slice(1);
+  }
+
+  var RsvpSummary = (function (_Component) {
+    _inherits(RsvpSummary, _Component);
+
+    function RsvpSummary(props) {
+      var _this = this;
+
+      _classCallCheck(this, RsvpSummary);
+
+      _get(Object.getPrototypeOf(RsvpSummary.prototype), 'constructor', this).call(this, props);
+      //console.log("reservation summary props: ", props);
+
+      this.sendEmail = function () {
+        var nameString = _this.props.data.attendees[0].firstName;
+
+        for (var i = 1; i < _this.props.data.attendees.length; i++) {
+          if (i == _this.props.data.attendees.length - 1) {
+            nameString += ", and " + _this.props.data.attendees[i].firstName;
+          } else {
+            nameString += ", " + _this.props.data.attendees[i].firstName;
+          }
+        }
+
+        var roomString = _this.props.data.hotel.numberOfRooms > 1 ? "rooms." : "room.";
+
+        _this.setState({ emailed: true });
+        _this.setState({ emailButtonText: "Sending..." });
+        m.call("messages/send-template", {
+          key: 'vIMEddhNNLrr-WncvmudWQ',
+          template_name: "wedding-template",
+          template_content: [{ "name": "firstNameString",
+            "content": nameString }, { "name": "hotelString",
+            "content": _this.props.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.props.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
+            "content": "timandmaddy.com/rsvp?" + _this.props.data.id }],
+          message: {
+            subject: "RSVP",
+            from_email: "rsvp@timandmaddy.com",
+            from_name: "Tim & Maddy",
+            to: [{
+              email: _this.props.data.email,
+              name: "Guest"
+            }],
+            global_merge_vars: [{ "name": "firstNameString",
+              "content": nameString }, { "name": "hotelString",
+              "content": _this.props.data.hotel.needsReservation ? "We will go ahead and reserve you " + _this.props.data.hotel.numberOfRooms + " " + roomString : "We will not reserve you a room." }, { "name": "rsvpURL",
+              "content": "timandmaddy.com/rsvp?" + _this.props.data.id }]
+          },
+          async: true
+        }, function (httpResponse) {
+          //console.log(httpResponse);
+          _this.setState({ emailButtonText: "Sent!" });
+        }, function (httpResponse) {
+          console.error(httpResponse);
+        });
+      };
+
+      this.state = {};
+      this.state.emailed = false;
+      this.state.emailButtonText = "Send RSVP to Email";
+
+      if (this.props.data.email == '') {
+        this.state.emailed = true;
+      }
+    }
+
+    _createClass(RsvpSummary, [{
+      key: 'render',
+      value: function render() {
+        var peopleRows = this.props.data.attendees.map(function (rowData, index) {
+          return _react2['default'].createElement(
+            'tr',
+            { key: "people" + index },
+            _react2['default'].createElement(
+              'td',
+              null,
+              rowData.firstName + " " + rowData.lastName
+            ),
+            _react2['default'].createElement(
+              'td',
+              { className: 'hide' },
+              capitalize(rowData.food)
+            ),
+            _react2['default'].createElement(
+              'td',
+              { className: 'hide' },
+              rowData.allergies === "" ? "None" : rowData.allergies
+            ),
+            _react2['default'].createElement(
+              'td',
+              null,
+              rowData.underage ? "Yes" : "No"
+            )
+          );
+        }, this);
+        var roomString = this.props.data.hotel.numberOfRooms > 1 ? "rooms." : "room.";
+        var hotelReservationString = this.props.data.hotel.needsReservation ? _react2['default'].createElement(
+          'p',
+          null,
+          'We will go ahead and reserve you ',
+          _react2['default'].createElement(
+            'strong',
+            null,
+            ' ',
+            this.props.data.hotel.numberOfRooms,
+            ' '
+          ),
+          ' ',
+          roomString,
+          ' '
+        ) : _react2['default'].createElement(
+          'p',
+          null,
+          'We will not reserve you a room.'
+        );
+        var emailString = this.props.data.email !== '' ? this.props.data.email : "none";
+        var hasEmailClass = this.props.data.email == '' ? 'hide col s12' : 'col s12';
+        var isAttendingClass = this.props.data.attending ? "" : "hide";
+        var isNotAttendingClass = this.props.data.attending ? "hide" : "";
+        var notAttendingMessage = this.props.data.attending ? "" : "We're sorry to hear you won't make it!!";
+
+        if (this.props.data.attending) {
+          return _react2['default'].createElement(
+            'div',
+            null,
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h2',
+                null,
+                'Thank you!'
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h5',
+                null,
+                'RSVP Summary'
+              ),
+              _react2['default'].createElement(
+                'table',
+                null,
+                _react2['default'].createElement(
+                  'thead',
+                  null,
+                  _react2['default'].createElement(
+                    'tr',
+                    null,
+                    _react2['default'].createElement(
+                      'th',
+                      { 'data-field': 'name' },
+                      'Name'
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      { className: 'hide', 'data-field': 'food' },
+                      'Food Choice'
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      { className: 'hide', 'data-field': 'allergies' },
+                      'Allergies'
+                    ),
+                    _react2['default'].createElement(
+                      'th',
+                      { 'data-field': 'underage' },
+                      'Underage'
+                    )
+                  )
+                ),
+                _react2['default'].createElement(
+                  'tbody',
+                  null,
+                  peopleRows
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h5',
+                null,
+                'Hotel Summary'
+              ),
+              hotelReservationString
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h5',
+                null,
+                'Contact Info'
+              ),
+              _react2['default'].createElement(
+                'div',
+                { className: 'col s12' },
+                'E-mail: ',
+                emailString
+              ),
+              _react2['default'].createElement(
+                'div',
+                { className: hasEmailClass },
+                _react2['default'].createElement(
+                  _reactMaterialize.Button,
+                  { onClick: this.sendEmail, disabled: this.state.emailed },
+                  this.state.emailButtonText
+                )
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Button,
+              { onClick: this.props.handleEditButton },
+              'Edit my RSVP'
+            )
+          );
+        } else {
+          return _react2['default'].createElement(
+            'div',
+            null,
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h2',
+                null,
+                'Thank you!'
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Row,
+              null,
+              _react2['default'].createElement(
+                'h6',
+                null,
+                notAttendingMessage
+              )
+            ),
+            _react2['default'].createElement(
+              _reactMaterialize.Button,
+              { onClick: this.props.handleEditButton },
+              'Edit my RSVP'
+            )
+          );
+        }
+      }
+    }]);
+
+    return RsvpSummary;
+  })(_react.Component);
+
+  exports['default'] = RsvpSummary;
+  module.exports = exports['default'];
 
 /***/ },
 /* 17 */
@@ -2356,11 +2408,11 @@ module.exports =
 
   var _reactMaterialize = __webpack_require__(2);
 
-  var _componentsRsvpEditor = __webpack_require__(14);
+  var _componentsRsvpEditor = __webpack_require__(15);
 
   var _componentsRsvpEditor2 = _interopRequireDefault(_componentsRsvpEditor);
 
-  var _reactCookie = __webpack_require__(7);
+  var _reactCookie = __webpack_require__(8);
 
   var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
